@@ -85,11 +85,19 @@ function listenScrolldown() {
     window.addEventListener('scroll', function show() {
         if (document.documentElement.scrollTop > 90) {
             if (!light) {
-                nav.style.borderBottom = "0.0625rem solid #1f2937";
+                //nav.style.borderBottom = "0.0625rem solid #1f2937";
+                nav.classList.remove('navbar_dark_border');
+                nav.classList.remove('navbar_light_border');
+                nav.classList.add('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_light_border_scroll');
                 nav.style.background = "rgba(3, 7, 18, 0.4)";
             }
             else {
-                nav.style.borderBottom = "0.0625rem solid #f3f4f6";
+                //nav.style.borderBottom = "0.0625rem solid #f3f4f6";
+                nav.classList.remove('navbar_dark_border');
+                nav.classList.remove('navbar_light_border');
+                nav.classList.remove('navbar_dark_border_scroll');
+                nav.classList.add('navbar_light_border_scroll');
                 nav.style.background = "rgba(255, 255, 255, 0.4)";
             }
             nav.style.backdropFilter = "blur(25px)";
@@ -101,16 +109,26 @@ function listenScrolldown() {
 function listenScrollup() {
     window.addEventListener('scroll', function hide() {
         if (document.documentElement.scrollTop <= 90) {
-            if (window.outerWidth > 768) {
-                if (!light)
-                    nav.style.borderBottom = "0.0625rem solid #030712";
-                else
-                    nav.style.borderBottom = "0.0625rem solid #ffffff";
-            }
-            if (!light)
+            // if (window.outerWidth > 768) {
+            //     if (!light)
+            //         nav.style.borderBottom = "0.0625rem solid #030712";
+            //     else
+            //         nav.style.borderBottom = "0.0625rem solid #ffffff";
+            // }
+            if (!light) {
+                nav.classList.add('navbar_dark_border');
+                nav.classList.remove('navbar_light_border');
+                nav.classList.remove('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_light_border_scroll');
                 nav.style.backgroundColor = "#030712";
-            else
+            }
+            else {
+                nav.classList.remove('navbar_dark_border');
+                nav.classList.add('navbar_light_border');
+                nav.classList.remove('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_light_border_scroll');
                 nav.style.backgroundColor = "#ffffff";
+            }
             window.removeEventListener('scroll', hide);
             listenScrolldown();
         }
@@ -173,14 +191,20 @@ function toggle() {
             glow[i].classList.add('glow_dark');
             glow[i].classList.remove('glow_light');
         }
-        nav.style.background = "rgba(255, 255, 255)";
-        nav.style.borderBottom = "0.0625rem solid #ffffff"
         if (document.documentElement.scrollTop > 90) {
-            nav.style.borderBottom = "0.0625rem solid #f3f4f6";
+            nav.classList.remove('navbar_dark_border_scroll');
+            nav.classList.remove('navbar_dark_border');
+            nav.classList.add('navbar_light_border_scroll');
+            nav.classList.remove('navbar_light_border');
             nav.style.background = "rgba(255, 255, 255, 0.4)";
         }
-        nav.classList.add('navbar_light_border');
-        nav.classList.remove('navbar_dark_border');
+        else {
+            nav.classList.remove('navbar_dark_border_scroll');
+            nav.classList.remove('navbar_dark_border');
+            nav.classList.remove('navbar_light_border_scroll');
+            nav.classList.add('navbar_light_border');
+            nav.style.background = "rgba(255, 255, 255)";
+        }
         for (i = 0; i < toggleButtons.length; i++) {
             toggleButtons[i].classList.add('glow_button_toggle_light');
         }
@@ -244,14 +268,20 @@ function toggle() {
             glow[i].classList.add('glow_light');
             glow[i].classList.remove('glow_dark');
         }
-        nav.style.background = "rgba(3, 7, 18)";
-        nav.style.borderBottom = "0.0625rem solid #030712"
         if (document.documentElement.scrollTop > 90) {
-            nav.style.borderBottom = "0.0625rem solid #1f2937";
+            nav.classList.add('navbar_dark_border_scroll');
+            nav.classList.remove('navbar_dark_border');
+            nav.classList.remove('navbar_light_border_scroll');
+            nav.classList.remove('navbar_light_border');
             nav.style.background = "rgba(3, 7, 18, 0.4)";
         }
-        nav.classList.add('navbar_dark_border');
-        nav.classList.remove('navbar_light_border');
+        else {
+            nav.classList.remove('navbar_dark_border_scroll');
+            nav.classList.add('navbar_dark_border');
+            nav.classList.remove('navbar_light_border_scroll');
+            nav.classList.remove('navbar_light_border');
+            nav.style.background = "rgba(3, 7, 18)";
+        }
         for (i = 0; i < toggleButtons.length; i++) {
             toggleButtons[i].classList.remove('glow_button_toggle_light');
         }
@@ -304,19 +334,45 @@ window.addEventListener('resize', () => {
     if (window.outerWidth > 768) {
         if (document.documentElement.scrollTop < 90) {
             if (!light) {
-                nav.style.borderBottom = '0.0625rem solid #030712';
+                nav.classList.add('navbar_dark_border');
+                nav.classList.remove('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_light_border_scroll');
+                nav.classList.remove('navbar_light_border');
             }
             else {
-                nav.style.borderBottom = '0.0625rem solid #ffffff';
+                nav.classList.add('navbar_light_border');
+                nav.classList.remove('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_light_border_scroll');
+                nav.classList.remove('navbar_dark_border');
+            }
+        }
+        else {
+            if (!light) {
+                nav.classList.add('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_dark_border');
+                nav.classList.remove('navbar_light_border_scroll');
+                nav.classList.remove('navbar_light_border');
+            }
+            else {
+                nav.classList.add('navbar_light_border_scroll');
+                nav.classList.remove('navbar_dark_border_scroll');
+                nav.classList.remove('navbar_dark_border');
+                nav.classList.remove('navbar_light_border');
             }
         }
     }
     else {
         if (!light) {
-            nav.style.borderBottom = '0.0625rem solid #1f2937';
+            nav.classList.add('navbar_dark_border_scroll');
+            nav.classList.remove('navbar_dark_border');
+            nav.classList.remove('navbar_light_border_scroll');
+            nav.classList.remove('navbar_light_border');
         }
         else {
-            nav.style.borderBottom = '0.0625rem solid #f3f4f6';
+            nav.classList.add('navbar_light_border_scroll');
+            nav.classList.remove('navbar_dark_border_scroll');
+            nav.classList.remove('navbar_dark_border');
+            nav.classList.remove('navbar_light_border');
         }
     }
 });
