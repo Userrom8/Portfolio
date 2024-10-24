@@ -114,6 +114,9 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     box-shadow: -5px 0px 100px #030712;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 @keyframes slidein {
@@ -231,7 +234,7 @@ body {
     padding: 1rem 2rem;
     box-sizing: border-box;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
     font-weight: 500;
@@ -252,6 +255,53 @@ body {
 
 .navbar_light_border_scroll {
     border-bottom: 0.0625rem solid #f3f4f6;
+}
+
+#watermark_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watermark {
+    overflow: hidden;
+    border-right: 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#watermark_part1{
+    width: 6ch;
+    animation: typing_withoutFade .5s steps(6) forwards, blink .5s step-end 5 alternate;
+}
+#watermark_part2{
+    width: 4ch;
+    animation: typing 1s steps(4) forwards, blink .25s step-end 10 alternate;
+}
+
+@keyframes typing_withoutFade {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    99%{
+        border-color: currentColor;
+    }
+    100%{
+        border-color: transparent;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #nav_main_container {
@@ -1072,7 +1122,7 @@ body {
     }
 }
 
-#footer_reachout{
+#footer_reachout {
     display: flex;
     flex-direction: column;
     align-items: center;

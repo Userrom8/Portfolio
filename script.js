@@ -14,11 +14,20 @@ var nav = document.getElementById('navbar');
 var toggleButtons = document.getElementsByClassName('btn_ptr');
 var toggleButtonsContainer = document.getElementsByClassName('btn_ptr_container');
 var downloadButtons = document.getElementsByClassName('download_button');
+var sun = document.getElementsByClassName('lucide-sun');
+var moon = document.getElementsByClassName('lucide-moon-star');
 var HTML = document.documentElement;
 var scrollWidth = 17;
 var menuWidth = remSize * 20;
 
+for (i = 0; i < moon.length; i++) {
+    moon[i].classList.add('hide');
+}
 
+setTimeout(() => {
+    document.getElementById('watermark_part2').classList.remove('hide');
+    document.getElementById('watermark_part1').style.borderColor = 'transparent';
+}, 2000);
 
 function cpy_email() {
     navigator.clipboard.writeText(document.getElementById('email').innerHTML);
@@ -85,7 +94,6 @@ function listenScrolldown() {
     window.addEventListener('scroll', function show() {
         if (document.documentElement.scrollTop > 90) {
             if (!light) {
-                //nav.style.borderBottom = "0.0625rem solid #1f2937";
                 nav.classList.remove('navbar_dark_border');
                 nav.classList.remove('navbar_light_border');
                 nav.classList.add('navbar_dark_border_scroll');
@@ -93,7 +101,6 @@ function listenScrolldown() {
                 nav.style.background = "rgba(3, 7, 18, 0.4)";
             }
             else {
-                //nav.style.borderBottom = "0.0625rem solid #f3f4f6";
                 nav.classList.remove('navbar_dark_border');
                 nav.classList.remove('navbar_light_border');
                 nav.classList.remove('navbar_dark_border_scroll');
@@ -109,12 +116,6 @@ function listenScrolldown() {
 function listenScrollup() {
     window.addEventListener('scroll', function hide() {
         if (document.documentElement.scrollTop <= 90) {
-            // if (window.outerWidth > 768) {
-            //     if (!light)
-            //         nav.style.borderBottom = "0.0625rem solid #030712";
-            //     else
-            //         nav.style.borderBottom = "0.0625rem solid #ffffff";
-            // }
             if (!light) {
                 nav.classList.add('navbar_dark_border');
                 nav.classList.remove('navbar_light_border');
@@ -139,7 +140,10 @@ function listenScrollup() {
 listenScrolldown();
 
 if (document.documentElement.scrollTop > 90) {
-    nav.style.borderBottom = "0.0625rem solid #1f2937";
+    nav.classList.remove('navbar_dark_border');
+    nav.classList.remove('navbar_light_border');
+    nav.classList.add('navbar_dark_border_scroll');
+    nav.classList.remove('navbar_light_border_scroll');
     nav.style.background = "rgba(3, 7, 18, 0.4)";
     nav.style.backdropFilter = "blur(25px)";
 }
@@ -236,12 +240,18 @@ function toggle() {
             toggleButtonsContainer[i].classList.add('btn_ptr_container_dark');
             toggleButtonsContainer[i].classList.remove('btn_ptr_container_light');
         }
-        var expressLink = document.getElementById('express');
+        var express = document.getElementById('express');
         express.classList.add('express_dark');
         express.classList.remove('express_light');
-        var threeLink = document.getElementById('express');
+        var three = document.getElementById('three');
         three.classList.add('three_dark');
         three.classList.remove('three_light');
+        for (i = 0; i < sun.length; i++) {
+            sun[i].classList.add('hide');
+        }
+        for (i = 0; i < moon.length; i++) {
+            moon[i].classList.remove('hide')
+        }
         //more lightmode codes
     }
     else {
@@ -313,12 +323,18 @@ function toggle() {
             toggleButtonsContainer[i].classList.remove('btn_ptr_container_dark');
             toggleButtonsContainer[i].classList.add('btn_ptr_container_light');
         }
-        var expressLink = document.getElementById('express');
+        var express = document.getElementById('express');
         express.classList.remove('express_dark');
         express.classList.add('express_light');
-        var threeLink = document.getElementById('express');
+        var three = document.getElementById('three');
         three.classList.remove('three_dark');
         three.classList.add('three_light');
+        for (i = 0; i < sun.length; i++) {
+            sun[i].classList.remove('hide');
+        }
+        for (i = 0; i < moon.length; i++) {
+            moon[i].classList.add('hide')
+        }
         //more darkmode codes
     }
 }
