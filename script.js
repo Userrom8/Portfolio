@@ -24,10 +24,6 @@ for (i = 0; i < moon.length; i++) {
     moon[i].classList.add('hide');
 }
 
-setTimeout(() => {
-    document.getElementById('watermark_part2').classList.remove('hide');
-    document.getElementById('watermark_part1').style.borderColor = 'transparent';
-}, 2000);
 
 function cpy_email() {
     navigator.clipboard.writeText(document.getElementById('email').innerHTML);
@@ -44,6 +40,14 @@ function openMenu() {
     const elem = document.getElementById('menu_list');
     elem.classList.remove('defocus');
     elem.classList.add('focus');
+    if(window.outerHeight > 330){
+        elem.classList.add('menu_noscroll');
+        elem.classList.remove('menu_scroll');
+    }
+    else{
+        elem.classList.remove('menu_noscroll');
+        elem.classList.add('menu_scroll');
+    }
     if (!light) {
         elem.classList.add('menu_bg-dark');
         elem.classList.remove('menu_bg-light');
@@ -390,5 +394,14 @@ window.addEventListener('resize', () => {
             nav.classList.remove('navbar_dark_border');
             nav.classList.remove('navbar_light_border');
         }
+    }
+    var menu = document.getElementById('opened_menu');
+    if(menu && window.outerHeight > 330){
+        menu.classList.add('menu_noscroll');
+        menu.classList.remove('menu_scroll');
+    }
+    else if(menu){
+        menu.classList.remove('menu_noscroll');
+        menu.classList.add('menu_scroll');
     }
 });

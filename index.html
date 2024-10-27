@@ -20,6 +20,7 @@
     <div id="menu_list" class="hide">
         <!-- menu contents go here -->
         <div id="menu_nav" class="dynamic_border border_dark">
+            <p id="menu_watermark" class="watermark">&ltRB /&gt</p>
             <button id="close_menu" class="btn_ptr glow_button_toggle">
                 <div id="close_container"
                     class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container"><svg
@@ -33,10 +34,10 @@
         </div>
         <div id="menu" class="dynamic_border border_dark">
             <ul id="menu_sub_container">
-                <li><a href="#about" class="menu_content glow glow_light para_text text_para_light">About</a></li>
-                <li><a class="menu_content glow glow_light para_text text_para_light">Work</a></li>
-                <li><a class="menu_content glow glow_light para_text text_para_light">Testimonials</a></li>
-                <li><a href="#footer" class="menu_content glow glow_light para_text text_para_light">Contact</a></li>
+                <li><a href="#about" class="menu_content glow glow_light para_text text_para_light padded">About</a></li>
+                <li><a class="menu_content glow glow_light para_text text_para_light padded">Work</a></li>
+                <li><a class="menu_content glow glow_light para_text text_para_light padded">Testimonials</a></li>
+                <li><a href="#footer" class="menu_content glow glow_light para_text text_para_light padded">Contact</a></li>
             </ul>
         </div>
         <div id="menu_footer" class="para_text text_para_light dynamic_border border_dark">
@@ -73,14 +74,7 @@
     </div>
     <div id="main">
         <div id="navbar" class="navbar_dark_border">
-            <div id="watermark_container" class="header_text text_heading_light">
-                <div id="watermark_part1" class="watermark">
-                  &lt/user
-                </div>
-                <div id="watermark_part2" class="watermark hide">
-                    Rom&gt
-                  </div>
-            </div>
+            <p id="nav_watermark" class="watermark">&ltRB /&gt</p>
             <div id="nav_main_container">
                 <div id="nav_content_container">
                     <a href="#about" class="glow glow_light para_text text_para_light">About</a>
@@ -205,7 +199,7 @@
                                     </svg></span></button>
                         </div>
                     </div>
-                    <div id="image_container" class="fixed">
+                    <div id="image_container">
                         <div id="image_content">
                             <div id="nav_image" class="img_hero_dark"></div>
                             <div id="nav_backdrop" class="backdrop_dark"></div>
@@ -222,7 +216,7 @@
                     </div>
                 </div>
                 <div id="about_content" class="content">
-                    <div id="about_image_container" class="fixed">
+                    <div id="about_image_container">
                         <div id="about_image_content">
                             <div id="about_image" class="img_about_dark"></div>
                             <div id="about_backdrop" class="backdrop_dark"></div>
