@@ -254,7 +254,7 @@ function toggle() {
             sun[i].classList.add('hide');
         }
         for (i = 0; i < moon.length; i++) {
-            moon[i].classList.remove('hide')
+            moon[i].classList.remove('hide');
         }
         //more lightmode codes
     }
@@ -337,7 +337,7 @@ function toggle() {
             sun[i].classList.remove('hide');
         }
         for (i = 0; i < moon.length; i++) {
-            moon[i].classList.add('hide')
+            moon[i].classList.add('hide');
         }
         //more darkmode codes
     }
