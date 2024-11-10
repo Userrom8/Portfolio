@@ -16,6 +16,7 @@ var toggleButtonsContainer = document.getElementsByClassName('btn_ptr_container'
 var downloadButtons = document.getElementsByClassName('download_button');
 var sun = document.getElementsByClassName('lucide-sun');
 var moon = document.getElementsByClassName('lucide-moon-star');
+var grads = document.getElementsByClassName('gradients');
 var HTML = document.documentElement;
 var scrollWidth = 17;
 var menuWidth = remSize * 20;
@@ -254,7 +255,10 @@ function toggle() {
             sun[i].classList.add('hide');
         }
         for (i = 0; i < moon.length; i++) {
-            moon[i].classList.remove('hide')
+            moon[i].classList.remove('hide');
+        }
+        for (i = 0; i < grads.length; i++) {
+            grads[i].classList.remove('gradient_light');
         }
         //more lightmode codes
     }
@@ -337,7 +341,10 @@ function toggle() {
             sun[i].classList.remove('hide');
         }
         for (i = 0; i < moon.length; i++) {
-            moon[i].classList.add('hide')
+            moon[i].classList.add('hide');
+        }
+        for (i = 0; i < grads.length; i++) {
+            grads[i].classList.add('gradient_light');
         }
         //more darkmode codes
     }
