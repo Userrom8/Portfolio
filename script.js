@@ -226,12 +226,12 @@ function toggle() {
             stickers[i].classList.add('sticker_light');
             stickers[i].classList.remove('sticker_dark');
         }
-        document.getElementById('nav_image').classList.add('img_hero_light');
-        document.getElementById('nav_image').classList.remove('img_hero_dark');
+        document.getElementById('hero_image').classList.add('img_hero_light');
+        document.getElementById('hero_image').classList.remove('img_hero_dark');
         document.getElementById('about_image').classList.add('img_about_light');
         document.getElementById('about_image').classList.remove('img_about_dark');
-        document.getElementById('nav_backdrop').classList.add('backdrop_light');
-        document.getElementById('nav_backdrop').classList.remove('backdrop_dark');
+        document.getElementById('hero_backdrop').classList.add('backdrop_light');
+        document.getElementById('hero_backdrop').classList.remove('backdrop_dark');
         document.getElementById('about_backdrop').classList.add('backdrop_light');
         document.getElementById('about_backdrop').classList.remove('backdrop_dark');
         for (i = 0; i < downloadButtons.length; i++) {
@@ -309,12 +309,12 @@ function toggle() {
             stickers[i].classList.remove('sticker_light');
             stickers[i].classList.add('sticker_dark');
         }
-        document.getElementById('nav_image').classList.remove('img_hero_light');
-        document.getElementById('nav_image').classList.add('img_hero_dark');
+        document.getElementById('hero_image').classList.remove('img_hero_light');
+        document.getElementById('hero_image').classList.add('img_hero_dark');
         document.getElementById('about_image').classList.remove('img_about_light');
         document.getElementById('about_image').classList.add('img_about_dark');
-        document.getElementById('nav_backdrop').classList.remove('backdrop_light');
-        document.getElementById('nav_backdrop').classList.add('backdrop_dark');
+        document.getElementById('hero_backdrop').classList.remove('backdrop_light');
+        document.getElementById('hero_backdrop').classList.add('backdrop_dark');
         document.getElementById('about_backdrop').classList.remove('backdrop_light');
         document.getElementById('about_backdrop').classList.add('backdrop_dark');
         for (i = 0; i < downloadButtons.length; i++) {

@@ -567,14 +567,14 @@ body {
     width: 320px;
 }
 
-#nav_image {
+#hero_image {
     position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
     height: 304px;
     width: 264px;
-    background-image: url("hero.jpg");
+    background-image: url("assets/hero.jpg");
     background-size: cover;
     background-position: 15%;
 }
@@ -587,7 +587,7 @@ body {
     border: 8px solid #ffffff;
 }
 
-#nav_backdrop {
+#hero_backdrop {
     position: absolute;
     border: 8px solid transparent;
     bottom: 0;
@@ -691,7 +691,7 @@ body {
     right: 0;
     height: 404px;
     width: 324px;
-    background-image: url("Cyberpunk\ remix_A1.art_.jpeg");
+    background-image: url("assets/about.jpg");
     background-size: cover;
     background-position: 15%;
 }
@@ -821,51 +821,51 @@ body {
 }
 
 #js {
-    background-image: url("icon-javascript.svg");
+    background-image: url("assets/icon-javascript.svg");
 }
 
 #ts {
-    background-image: url("icon-typescript.svg");
+    background-image: url("assets/icon-typescript.svg");
 }
 
 #react {
-    background-image: url("icon-react.svg");
+    background-image: url("assets/icon-react.svg");
 }
 
 #next {
-    background-image: url("icon-nextjs.svg");
+    background-image: url("assets/icon-nextjs.svg");
 }
 
 #node {
-    background-image: url("icon-nodejs.svg");
+    background-image: url("assets/icon-nodejs.svg");
 }
 
 .express_light {
-    background-image: url("icon-express-light.svg");
+    background-image: url("assets/icon-express-light.svg");
 }
 
 .express_dark {
-    background-image: url("icon-express-dark.svg");
+    background-image: url("assets/icon-express-dark.svg");
 }
 
 #tailwind {
-    background-image: url("icon-tailwindcss.svg");
+    background-image: url("assets/icon-tailwindcss.svg");
 }
 
 #figma {
-    background-image: url("icon-figma.svg");
+    background-image: url("assets/icon-figma.svg");
 }
 
 #git {
-    background-image: url("icon-git.svg");
+    background-image: url("assets/icon-git.svg");
 }
 
 .three_light {
-    background-image: url("icon-threejs-light.svg");
+    background-image: url("assets/icon-threejs-light.svg");
 }
 
 .three_dark {
-    background-image: url("icon-threejs-dark.svg");
+    background-image: url("assets/icon-threejs-dark.svg");
 }
 
 
@@ -929,7 +929,7 @@ body {
         justify-content: center;
     }
 
-    #nav_image {
+    #hero_image {
         position: relative;
         height: 280px;
         width: 240px;
@@ -937,7 +937,7 @@ body {
         background-position: 25%;
     }
 
-    #nav_backdrop {
+    #hero_backdrop {
         height: 280px;
         width: 280px;
         box-sizing: border-box;
@@ -993,12 +993,12 @@ body {
         height: 225px;
     }
 
-    #nav_image {
+    #hero_image {
         width: 200px;
         height: 200px;
     }
 
-    #nav_backdrop {
+    #hero_backdrop {
         width: 200px;
         height: 200px;
     }
