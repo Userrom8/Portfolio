@@ -5,8 +5,8 @@
 
 /* color classes */
 .gradient_light {
-    background: rgb(0,0,0) !important;
-    background: linear-gradient(56deg, rgba(0,0,0,1) 30%, rgba(21,66,64,1) 40%, rgba(17,24,39,1) 62%) !important;
+    background: rgb(0,0,0);
+    background: linear-gradient(56deg, rgba(0,0,0,1) 30%, rgba(21,66,64,1) 40%, rgba(17,24,39,1) 62%);
 }
 
 html {
@@ -650,7 +650,7 @@ body {
     width: 100%;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #111827;
+    /* background-color: #111827; */
 }
 
 .tag {
