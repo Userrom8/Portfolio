@@ -7,6 +7,7 @@ let menuElems = document.getElementsByClassName('menu_content');
 let socialElems = document.getElementsByClassName('socials_container');
 let tLayer = document.getElementById('transparent_layer');
 let sectionLight = document.getElementsByClassName('section_light');
+let sectionLightNarrow = document.getElementsByClassName('section_light_narrow');
 let header = document.getElementsByClassName('header_text');
 let para = document.getElementsByClassName('para_text');
 let glow = document.getElementsByClassName('glow');
@@ -183,6 +184,7 @@ function toggle() {
         HTML.classList.remove('dark');
         document.body.style.backgroundColor = "#ffffff"
         for (i = 0; i < sectionLight.length; i++) sectionLight[i].style.backgroundColor = "#f9fafb";
+        for (i = 0; i < sectionLightNarrow.length; i++) sectionLightNarrow[i].style.backgroundColor = "#f9fafb";
         for (i = 0; i < header.length; i++) {
             header[i].classList.add('text_heading_dark');
             header[i].classList.remove('text_heading_light');
@@ -269,6 +271,7 @@ function toggle() {
         HTML.classList.remove('light');
         document.body.style.backgroundColor = "#030712"
         for (i = 0; i < sectionLight.length; i++) sectionLight[i].style.backgroundColor = "#111827";
+        for (i = 0; i < sectionLightNarrow.length; i++) sectionLightNarrow[i].style.backgroundColor = "#111827";
         for (i = 0; i < header.length; i++) {
             header[i].classList.add('text_heading_light');
             header[i].classList.remove('text_heading_dark');
