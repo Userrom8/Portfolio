@@ -1,24 +1,24 @@
-var light = false;
+let light = false;
 
-var remSize = document.getElementById('github_button').offsetWidth / 2.25;
+let remSize = document.getElementById('github_button').offsetWidth / 2.25;
 
 
-var menuElems = document.getElementsByClassName('menu_content');
-var socialElems = document.getElementsByClassName('socials_container');
-var tLayer = document.getElementById('transparent_layer');
-var sectionLight = document.getElementsByClassName('section_light');
-var header = document.getElementsByClassName('header_text');
-var para = document.getElementsByClassName('para_text');
-var glow = document.getElementsByClassName('glow');
-var nav = document.getElementById('navbar');
-var toggleButtons = document.getElementsByClassName('btn_ptr');
-var toggleButtonsContainer = document.getElementsByClassName('btn_ptr_container');
-var downloadButtons = document.getElementsByClassName('download_button');
-var sun = document.getElementsByClassName('lucide-sun');
-var moon = document.getElementsByClassName('lucide-moon-star');
-var HTML = document.documentElement;
-var scrollWidth = 17;
-var menuWidth = remSize * 20;
+let menuElems = document.getElementsByClassName('menu_content');
+let socialElems = document.getElementsByClassName('socials_container');
+let tLayer = document.getElementById('transparent_layer');
+let sectionLight = document.getElementsByClassName('section_light');
+let header = document.getElementsByClassName('header_text');
+let para = document.getElementsByClassName('para_text');
+let glow = document.getElementsByClassName('glow');
+let nav = document.getElementById('navbar');
+let toggleButtons = document.getElementsByClassName('btn_ptr');
+let toggleButtonsContainer = document.getElementsByClassName('btn_ptr_container');
+let downloadButtons = document.getElementsByClassName('download_button');
+let sun = document.getElementsByClassName('lucide-sun');
+let moon = document.getElementsByClassName('lucide-moon-star');
+let HTML = document.documentElement;
+let scrollWidth = 17;
+let menuWidth = remSize * 20;
 
 for (i = 0; i < moon.length; i++) {
     moon[i].classList.add('hide');
@@ -190,7 +190,7 @@ function toggle() {
             para[i].classList.add('text_para_dark');
             para[i].classList.remove('text_para_light');
         }
-        var opmen = document.getElementById('opened_menu');
+        let opmen = document.getElementById('opened_menu');
         if (opmen) {
             opmen.classList.add('menu_bg-light');
             opmen.classList.remove('menu_bg-dark');
@@ -216,12 +216,12 @@ function toggle() {
         for (i = 0; i < toggleButtons.length; i++) {
             toggleButtons[i].classList.add('glow_button_toggle_light');
         }
-        var dynBorder = document.getElementsByClassName('dynamic_border');
+        let dynBorder = document.getElementsByClassName('dynamic_border');
         for (i = 0; i < dynBorder.length; i++) {
             dynBorder[i].classList.add('border_light');
             dynBorder[i].classList.remove('border_dark');
         }
-        var stickers = document.getElementsByClassName('sticker_container');
+        let stickers = document.getElementsByClassName('sticker_container');
         for (i = 0; i < stickers.length; i++) {
             stickers[i].classList.add('sticker_light');
             stickers[i].classList.remove('sticker_dark');
@@ -244,10 +244,10 @@ function toggle() {
             toggleButtonsContainer[i].classList.add('btn_ptr_container_dark');
             toggleButtonsContainer[i].classList.remove('btn_ptr_container_light');
         }
-        var express = document.getElementById('express');
+        let express = document.getElementById('express');
         express.classList.add('express_dark');
         express.classList.remove('express_light');
-        var three = document.getElementById('three');
+        let three = document.getElementById('three');
         three.classList.add('three_dark');
         three.classList.remove('three_light');
         for (i = 0; i < sun.length; i++) {
@@ -273,7 +273,7 @@ function toggle() {
             para[i].classList.add('text_para_light');
             para[i].classList.remove('text_para_dark');
         }
-        var opmen = document.getElementById('opened_menu');
+        let opmen = document.getElementById('opened_menu');
         if (opmen) {
             opmen.classList.add('menu_bg-dark');
             opmen.classList.remove('menu_bg-light');
@@ -299,12 +299,12 @@ function toggle() {
         for (i = 0; i < toggleButtons.length; i++) {
             toggleButtons[i].classList.remove('glow_button_toggle_light');
         }
-        var dynBorder = document.getElementsByClassName('dynamic_border');
+        let dynBorder = document.getElementsByClassName('dynamic_border');
         for (i = 0; i < dynBorder.length; i++) {
             dynBorder[i].classList.remove('border_light');
             dynBorder[i].classList.add('border_dark');
         }
-        var stickers = document.getElementsByClassName('sticker_container');
+        let stickers = document.getElementsByClassName('sticker_container');
         for (i = 0; i < stickers.length; i++) {
             stickers[i].classList.remove('sticker_light');
             stickers[i].classList.add('sticker_dark');
@@ -327,10 +327,10 @@ function toggle() {
             toggleButtonsContainer[i].classList.remove('btn_ptr_container_dark');
             toggleButtonsContainer[i].classList.add('btn_ptr_container_light');
         }
-        var express = document.getElementById('express');
+        let express = document.getElementById('express');
         express.classList.remove('express_dark');
         express.classList.add('express_light');
-        var three = document.getElementById('three');
+        let three = document.getElementById('three');
         three.classList.remove('three_dark');
         three.classList.add('three_light');
         for (i = 0; i < sun.length; i++) {
@@ -395,7 +395,7 @@ window.addEventListener('resize', () => {
             nav.classList.remove('navbar_light_border');
         }
     }
-    var menu = document.getElementById('opened_menu');
+    let menu = document.getElementById('opened_menu');
     if(menu && window.outerHeight > 330){
         menu.classList.add('menu_noscroll');
         menu.classList.remove('menu_scroll');
