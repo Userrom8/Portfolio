@@ -18,6 +18,8 @@ let downloadButtons = document.getElementsByClassName('download_button');
 let sun = document.getElementsByClassName('lucide-sun');
 let moon = document.getElementsByClassName('lucide-moon-star');
 let grads = document.getElementsByClassName('gradients');
+let workTiles = document.getElementsByClassName('work_tiles');
+let btnBG_Light = document.getElementsByClassName('work_external_link');
 let HTML = document.documentElement;
 let scrollWidth = 17;
 let menuWidth = remSize * 20;
@@ -224,7 +226,7 @@ function toggle() {
             dynBorder[i].classList.add('border_light');
             dynBorder[i].classList.remove('border_dark');
         }
-        let stickers = document.getElementsByClassName('sticker_container');
+        let stickers = document.getElementsByClassName('sticker_color');
         for (i = 0; i < stickers.length; i++) {
             stickers[i].classList.add('sticker_light');
             stickers[i].classList.remove('sticker_dark');
@@ -261,6 +263,16 @@ function toggle() {
         }
         for (i = 0; i < grads.length; i++) {
             grads[i].classList.remove('gradient_light');
+        }
+        for (i = 0; i < workTiles.length; i++) {
+            workTiles[i].classList.remove('tiles_dark');
+            workTiles[i].classList.add('tiles_light');
+        }
+        for (i = 0; i < btnBG_Light.length; i++) {
+            btnBG_Light[i].classList.remove('btn_bg-light_dark');
+            btnBG_Light[i].classList.add('btn_ptr_container_bg-light_dark');
+            btnBG_Light[i].classList.add('btn_bg-light_light');
+            btnBG_Light[i].classList.remove('btn_ptr_container_bg-light_light');
         }
         //more lightmode codes
     }
@@ -311,7 +323,7 @@ function toggle() {
             dynBorder[i].classList.remove('border_light');
             dynBorder[i].classList.add('border_dark');
         }
-        let stickers = document.getElementsByClassName('sticker_container');
+        let stickers = document.getElementsByClassName('sticker_color');
         for (i = 0; i < stickers.length; i++) {
             stickers[i].classList.remove('sticker_light');
             stickers[i].classList.add('sticker_dark');
@@ -348,6 +360,16 @@ function toggle() {
         }
         for (i = 0; i < grads.length; i++) {
             grads[i].classList.add('gradient_light');
+        }
+        for (i = 0; i < workTiles.length; i++) {
+            workTiles[i].classList.add('tiles_dark');
+            workTiles[i].classList.remove('tiles_light');
+        }
+        for (i = 0; i < btnBG_Light.length; i++) {
+            btnBG_Light[i].classList.add('btn_bg-light_dark');
+            btnBG_Light[i].classList.remove('btn_ptr_container_bg-light_dark');
+            btnBG_Light[i].classList.remove('btn_bg-light_light');
+            btnBG_Light[i].classList.add('btn_ptr_container_bg-light_light');
         }
         //more darkmode codes
     }
