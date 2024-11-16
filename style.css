@@ -388,7 +388,7 @@ body {
 .btn_ptr:hover {
     cursor: pointer;
     background-color: var(--grey-100);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 /* .glow_button_toggle_light:hover {
@@ -399,6 +399,7 @@ body {
 
 .btn_ptr:hover .btn_ptr_container {
     color: var(--sun-moon);
+    transition: 0.3s ease;
 }
 
 /* .glow_button_toggle_light:hover .btn_ptr_container {
