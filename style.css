@@ -5,7 +5,6 @@
 
 /* color classes */
 .gradients {
-    /* background: rgb(0,0,0); */
     background: var(--grads)
 }
 
@@ -53,21 +52,6 @@ html {
     --bg-faded: #ffffff66;
 }
 
-/* .text_heading_dark {
-    color: #111827;
-}
-
-.text_heading_light {
-    color: #f9fafb;
-}
-
-.text_para_dark {
-    color: #4b5563;
-}
-
-.text_para_light {
-    color: #d1d5db;
-} */
 
 .header_text{
     color: var(--text);
@@ -122,17 +106,6 @@ body {
     transition: 0.3s;
 }
 
-/* .darken:hover {
-    cursor: pointer;
-    background-color: #d1d5db !important;
-    transition: 0.3s;
-}
-
-.lighten:hover {
-    cursor: pointer;
-    background-color: #111827cc !important;
-    transition: 0.3s;
-} */
 
 .btn_ptr_container {
     display: flex;
@@ -148,9 +121,8 @@ body {
     height: 100%;
     width: 20rem !important;
     z-index: 100;
-    animation: slidein 0.3s ease-out;
+    animation: slidein 0.3s ease;
     flex-direction: column;
-    box-shadow: -5px 0px 100px #030712;
     flex-wrap: nowrap;
     overflow-x: hidden;
 }
@@ -192,7 +164,7 @@ body {
 
     100% {
         right: -20rem;
-        background: transparent;
+        opacity: 0;
     }
 }
 
@@ -244,13 +216,6 @@ body {
     gap: 1rem;
 }
 
-/* .border_dark {
-    border-bottom: 1px solid #1f2937;
-}
-
-.border_light {
-    border-bottom: 1px solid #f3f4f6;
-} */
 
 #theme {
     width: 18rem;
@@ -304,17 +269,9 @@ body {
     border-bottom: 0.0625rem solid var(--bg-body);
 }
 
-/* .navbar_light_border {
-    border-bottom: 0.0625rem solid #ffffff;
-} */
-
 .navbar_border_scroll {
     border-bottom: 0.0625rem solid var(--grey-100);
 }
-
-/* .navbar_light_border_scroll {
-    border-bottom: 0.0625rem solid #f3f4f6;
-} */
 
 
 @keyframes typing_withoutFade {
@@ -391,20 +348,10 @@ body {
     transition: 0.3s ease;
 }
 
-/* .glow_button_toggle_light:hover {
-    cursor: pointer;
-    background-color: #f3f4f6;
-    transition: 0.3s;
-} */
-
 .btn_ptr:hover .btn_ptr_container {
     color: var(--sun-moon);
     transition: 0.3s ease;
 }
-
-/* .glow_button_toggle_light:hover .btn_ptr_container {
-    color: #111827;
-} */
 
 #nav_download {
     display: flex;
@@ -430,11 +377,6 @@ body {
     background-color: var(--grey-20);
     transition: 0.3s;
 }
-
-/* .light_button {
-    background-color: #111827;
-    color: #ffffff;
-} */
 
 .section_dark {
     padding-top: 5rem;
@@ -599,10 +541,6 @@ body {
     color: var(--grey-50-inv);
 }
 
-/* .btn_ptr_container_dark {
-    color: #4b5563;
-} */
-
 #image_container {
     display: flex;
     justify-content: end;
@@ -626,14 +564,6 @@ body {
     background-position: 15%;
     border: 8px solid var(--bg-body);
 }
-
-/* .img_hero_dark {
-    border: 8px solid #030712;
-}
-
-.img_hero_light {
-    border: 8px solid #ffffff;
-} */
 
 #nav_backdrop {
     position: absolute;
@@ -706,14 +636,6 @@ body {
     background-color: var(--grey-70);
 }
 
-/* .sticker_dark {
-    background-color: #374151;
-}
-
-.sticker_light {
-    background-color: #e5e7eb;
-} */
-
 .sticker_text {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -745,14 +667,6 @@ body {
     background-position: 15%;
     border: 8px solid var(--section-l);
 }
-
-/* .img_about_dark {
-    border: 8px solid #111827;
-}
-
-.img_about_light {
-    border: 8px solid #f9fafb;
-} */
 
 #about_backdrop {
     position: absolute;
@@ -923,10 +837,6 @@ body {
     .navbar_border {
         border-bottom: 0.0625rem solid var(--grey-100);
     }
-
-    /* .navbar_light_border {
-        border-bottom: 0.0625rem solid #f3f4f6;
-    } */
 
     .section_light {
         padding-top: 4rem;
@@ -1224,14 +1134,6 @@ body {
     background-color: var(--grey-3);
 }
 
-/* .tiles_dark{
-    background-color: #121e36;
-}
-
-.tiles_light{
-    background-color: #f6f6f8;
-} */
-
 @media only screen and (max-width: 768px){
     .work_tiles{
         flex-direction: column;
@@ -1330,19 +1232,3 @@ body {
 .work_external_link:hover{
     background-color: var(--grey-2);
 }
-
-/* .btn_bg-light_dark:hover{
-    background-color: #010d24;
-}
-
-.btn_bg-light_light:hover{
-    background-color: #e5e7eb62;
-}
-
-.btn_ptr_container_bg-light_dark{
-    color: #6c727f;
-}
-
-.btn_ptr_container_bg-light_light{
-    color: #9da3ae;
-} */
