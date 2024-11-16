@@ -31,10 +31,10 @@ function openMenu() {
     const elem = document.getElementById('menu_list');
     elem.classList.remove('defocus');
     elem.classList.add('focus');
-    if(window.outerHeight > 330){
+    if (window.outerHeight > 330) {
         elem.classList.replace('menu_scroll', 'menu_noscroll');
     }
-    else{
+    else {
         elem.classList.replace('menu_noscroll', 'menu_scroll');
     }
     elem.classList.add('menu_bg');
@@ -94,7 +94,7 @@ listenScrolldown();
 
 if (document.documentElement.scrollTop > 90) {
     nav.classList.replace('navbar_border', 'navbar_border_scroll');
-    
+
 }
 
 document.getElementById('github_button').addEventListener('click', () => {
@@ -190,11 +190,11 @@ window.addEventListener('resize', () => {
         nav.classList.replace('navbar_border', 'navbar_border_scroll');
     }
     let menu = document.getElementById('opened_menu');
-    if(menu && window.outerHeight > 330){
+    if (menu && window.outerHeight > 330) {
         menu.classList.add('menu_noscroll');
         menu.classList.remove('menu_scroll');
     }
-    else if(menu){
+    else if (menu) {
         menu.classList.remove('menu_noscroll');
         menu.classList.add('menu_scroll');
     }
