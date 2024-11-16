@@ -19,11 +19,11 @@
     <div id="transparent_layer"></div>
     <div id="menu_list" class="hide">
         <!-- menu contents go here -->
-        <div id="menu_nav" class="dynamic_border border_dark">
+        <div id="menu_nav">
             <p id="menu_watermark" class="watermark">&ltRB /&gt</p>
-            <button id="close_menu" class="btn_ptr glow_button_toggle">
+            <button id="close_menu" class="btn_ptr">
                 <div id="close_container"
-                    class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container"><svg
+                    class="btn_ptr_container"><svg
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-x">
@@ -32,20 +32,22 @@
                     </svg></div>
             </button>
         </div>
-        <div id="menu" class="dynamic_border border_dark">
+        <div id="menu">
             <ul id="menu_sub_container">
-                <li><a href="#about" class="menu_content glow glow_light para_text text_para_light padded">About</a></li>
-                <li><a href="#work" class="menu_content glow glow_light para_text text_para_light padded">Work</a></li>
-                <li><a class="menu_content glow glow_light para_text text_para_light padded">Testimonials</a></li>
-                <li><a href="#footer" class="menu_content glow glow_light para_text text_para_light padded">Contact</a></li>
+                <li><a href="#about" class="menu_content glow para_text padded">About</a>
+                </li>
+                <li><a href="#work" class="menu_content glow para_text padded">Work</a></li>
+                <li><a class="menu_content glow para_text padded">Testimonials</a></li>
+                <li><a href="#footer" class="menu_content glow para_text padded">Contact</a>
+                </li>
             </ul>
         </div>
-        <div id="menu_footer" class="para_text text_para_light dynamic_border border_dark">
+        <div id="menu_footer" class="para_text">
             <div id="theme">
                 <p id="menu_footer_text">Switch Theme</p>
-                <button id="menu_mode_toggle" class="btn_ptr glow_button_toggle">
+                <button id="menu_mode_toggle" class="btn_ptr">
                     <div id="menu_toggle_container"
-                        class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                        class="btn_ptr_container">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-sun">
@@ -69,24 +71,24 @@
                     </div>
                 </button>
             </div>
-            <button id="menu_download" class="darken dark_button download_button">Download CV</button>
+            <button id="menu_download" class="download_button">Download CV</button>
         </div>
     </div>
     <div id="main">
-        <div id="navbar" class="navbar_dark_border">
+        <div id="navbar" class="navbar_border">
             <p id="nav_watermark" class="watermark">&ltRB /&gt</p>
             <div id="nav_main_container">
                 <div id="nav_content_container">
-                    <a href="#about" class="glow glow_light para_text text_para_light">About</a>
-                    <a href="#work" class="glow glow_light para_text text_para_light">Work</a>
-                    <a class="glow glow_light para_text text_para_light">Testimonials</a>
-                    <a href="#footer" class="glow glow_light para_text text_para_light">Contact</a>
+                    <a href="#about" class="glow para_text">About</a>
+                    <a href="#work" class="glow para_text">Work</a>
+                    <a class="glow para_text">Testimonials</a>
+                    <a href="#footer" class="glow para_text">Contact</a>
                 </div>
                 <div id="seperator"></div>
                 <div id="button_container">
-                    <button id="mode_toggle" class="btn_ptr glow_button_toggle">
+                    <button id="mode_toggle" class="btn_ptr">
                         <div id="toggle_container"
-                            class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                            class="btn_ptr_container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="lucide lucide-sun">
@@ -109,11 +111,11 @@
                             </svg>
                         </div>
                     </button>
-                    <button id="nav_download" class="darken dark_button download_button">Download CV</button>
+                    <button id="nav_download" class="download_button">Download CV</button>
                 </div>
             </div>
-            <button id="hamburger_menu" class="btn_ptr glow_button_toggle" onclick="openMenu()">
-                <div id="menu_container" class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+            <button id="hamburger_menu" class="btn_ptr" onclick="openMenu()">
+                <div id="menu_container" class="btn_ptr_container">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-menu">
@@ -129,11 +131,11 @@
                 <div id="top_content" class="content">
                     <div id="text">
                         <div id="bio">
-                            <div id="heading" class="header_text text_heading_light">
+                            <div id="heading" class="header_text">
                                 Hi, I'm Romit
                                 <span id="wave_hand">👋</span>
                             </div>
-                            <div class="paragraph para_text text_para_light">
+                            <div class="paragraph para_text">
                                 I'm a full stack developer (React.js & Node.js) with a focus on creating (and
                                 occasionally
                                 designing) exceptional digital experiences that are fast, accessible, visually
@@ -145,7 +147,7 @@
                                 as if it was something new.
                             </div>
                         </div>
-                        <div class="paragraph para_text text_para_light">
+                        <div class="paragraph para_text">
                             <div class="para2">
                                 <span id="location"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -168,8 +170,8 @@
                         </div>
                         <div id="socials">
                             <button id="github_button"
-                                class="socials_container socials_hover btn_ptr glow_button_toggle"><span id="github"
-                                    class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                                class="btn_ptr"><span id="github"
+                                    class="btn_ptr_container">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="lucide lucide-github">
@@ -178,8 +180,8 @@
                                         <path d="M9 18c-4.51 2-5-2-7-2" />
                                     </svg></span></button>
                             <button id="twitter_button"
-                                class="socials_container socials_hover btn_ptr glow_button_toggle"><span id="twitter"
-                                    class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                                class="btn_ptr"><span id="twitter"
+                                    class="btn_ptr_container">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="lucide lucide-twitter">
@@ -187,8 +189,8 @@
                                             d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                                     </svg></span></button>
                             <button id="linkedin_button"
-                                class="socials_container socials_hover btn_ptr glow_button_toggle"><span id="linkedin"
-                                    class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                                class="btn_ptr"><span id="linkedin"
+                                    class="btn_ptr_container">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="lucide lucide-linkedin">
@@ -201,76 +203,76 @@
                     </div>
                     <div id="image_container">
                         <div id="image_content">
-                            <div id="nav_image" class="img_hero_dark"></div>
-                            <div id="nav_backdrop" class="backdrop_dark"></div>
+                            <div id="nav_image"></div>
+                            <div id="nav_backdrop" class="backdrop"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="about" class="section_light gradients gradient_light">
+        <section id="about" class="section_light gradients">
             <div id="about_container" class="container">
                 <div class="tag">
-                    <div class="sticker_container sticker_color sticker_dark">
-                        <p class="sticker_text para_text text_para_light">About me</p>
+                    <div class="sticker_container">
+                        <p class="sticker_text para_text">About me</p>
                     </div>
                 </div>
                 <div id="about_content" class="content">
                     <div id="about_image_container">
                         <div id="about_image_content">
-                            <div id="about_image" class="img_about_dark"></div>
-                            <div id="about_backdrop" class="backdrop_dark"></div>
+                            <div id="about_image"></div>
+                            <div id="about_backdrop" class="backdrop"></div>
                         </div>
                     </div>
                     <div id="about_text_container">
-                        <h3 id="about_text_heading" class="header_text text_heading_light">
+                        <h3 id="about_text_heading" class="header_text">
                             Curious about me? Here you have it:
                         </h3>
-                        <p class="paragraph para_text text_para_light">
+                        <p class="paragraph para_text">
                             I'm a passionate, self-proclaimed designer who specializes in full stack development
                             (React.js & Node.js). I am enthusiastic about bringing the technical and visual aspects of
                             digital products to life. User experience, pixel perfect design, and writing clear,
                             readable, highly performant code matters to me.
                         </p>
-                        <p class="paragraph para_text text_para_light">
+                        <p class="paragraph para_text">
                             I began my journey as a web developer in 2022, and since then, I've continued to grow and
                             evolve as a developer, taking on new challenges and learning the latest technologies along
                             the way. Now, in my early twenties, 2 years after starting my web development journey, I'm
                             building cutting-edge web applications using modern technologies such as Next.js,
                             TypeScript, Threejs, Nextjs, Tailwindcss and much more.
                         </p>
-                        <p class="paragraph para_text text_para_light">
+                        <p class="paragraph para_text">
                             I am very much a progressive thinker and enjoy working on products end to end, from ideation
                             all the way to development.
                         </p>
-                        <p class="paragraph para_text text_para_light">
+                        <p class="paragraph para_text">
                             When I'm not in full-on developer mode, you can find me hovering around on twitter or on
                             indie hacker, witnessing the journey of early startups or enjoying some free time. You can
                             follow me on Twitter where I share tech-related bites and build in public, or you can follow
                             me on GitHub.
                         </p>
-                        <p class="paragraph para_text text_para_light">
+                        <p class="paragraph para_text">
                             Finally, some quick bits about me.
                         </p>
                         <div id="about_points">
                             <ul class="about_list_container">
-                                <li class="about_points_content para_text text_para_light">
+                                <li class="about_points_content para_text">
                                     B.E. in Computer Engineering
                                 </li>
-                                <li class="about_points_content para_text text_para_light">
+                                <li class="about_points_content para_text">
                                     Freelancer
                                 </li>
                             </ul>
                             <ul class="about_list_container">
-                                <li class="about_points_content para_text text_para_light">
+                                <li class="about_points_content para_text">
                                     Avid learner
                                 </li>
-                                <li class="about_points_content para_text text_para_light">
+                                <li class="about_points_content para_text">
                                     Aspiring indie hacker
                                 </li>
                             </ul>
                         </div>
-                        <p class="paragraph para_text text_para_light">
+                        <p class="paragraph para_text">
                             One last thing, I'm available for freelance work, so feel free to reach out and say hello! I
                             promise I don't bite 😉
                         </p>
@@ -282,15 +284,15 @@
             <div id="skills_container" class="container">
                 <div id="skills_header_content" class="header_content">
                     <div class="tag">
-                        <div class="sticker_container sticker_color sticker_dark">
-                            <p class="sticker_text para_text text_para_light">Skills</p>
+                        <div class="sticker_container">
+                            <p class="sticker_text para_text">Skills</p>
                         </div>
                     </div>
-                    <p id="footer_header_text" class="section_header_text para_text text_para_light">
+                    <p id="footer_header_text" class="section_header_text para_text">
                         The skills, tools and technologies I am really good at:
                     </p>
                 </div>
-                <div id="skills_content" class="para_text text_para_light">
+                <div id="skills_content" class="para_text">
                     <div class="skill_item">
                         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" id="js"
                             class="skill_item_image size-64"></a>
@@ -344,54 +346,62 @@
             <div id="work_container" class="container">
                 <div id="work_header_content" class="header_content">
                     <div class="tag">
-                        <div class="sticker_container sticker_color sticker_dark">
-                            <p class="sticker_text para_text text_para_light">Work</p>
+                        <div class="sticker_container">
+                            <p class="sticker_text para_text">Work</p>
                         </div>
                     </div>
-                    <p id="footer_header_text" class="section_header_text para_text text_para_light">
+                    <p id="footer_header_text" class="section_header_text para_text">
                         Some of the noteworthy projects I have built:
                     </p>
                 </div>
-                <div id="work_content" class="work_tiles tiles_dark">
-                    <div id="sumz_img_container" class="work_img_container sticker_color sticker_dark">
+                <div id="work_content" class="work_tiles">
+                    <div id="sumz_img_container" class="work_img_container">
                         <a target="_blank" href="">
-                            <img id="sumz_img" class="work_img" width="100%" height="100%" decoding="async" loading="lazy" src="assets/sumz.png">
+                            <img id="sumz_img" class="work_img" width="100%" height="100%" decoding="async"
+                                loading="lazy" src="assets/sumz.png">
                         </a>
                     </div>
                     <div id="sumz_txt_container" class="work_txt_container">
-                        <p id="sumz_header" class="work_tile_header header_text text_heading_light">Summize</p>
-                        <p class="paragraph para_text text_para_light">
-                            A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.
+                        <p id="sumz_header" class="work_tile_header header_text">Summize</p>
+                        <p class="paragraph para_text">
+                            A platform for comparing and finding affordable flights, as well as booking and purchasing
+                            tickets safely and easily in a few simple clicks.
                         </p>
                         <div class="work_tile_sticker_container">
                             <div class="tag">
-                                <div class="sticker_container sticker_color sticker_dark">
-                                    <p class="sticker_text para_text text_para_light">React</p>
+                                <div class="sticker_container">
+                                    <p class="sticker_text para_text">React</p>
                                 </div>
                             </div>
                             <div class="tag">
-                                <div class="sticker_container sticker_color sticker_dark">
-                                    <p class="sticker_text para_text text_para_light">Tailwindcss</p>
+                                <div class="sticker_container">
+                                    <p class="sticker_text para_text">Tailwindcss</p>
                                 </div>
                             </div>
                             <div class="tag">
-                                <div class="sticker_container sticker_color sticker_dark">
-                                    <p class="sticker_text para_text text_para_light">GPT-4</p>
+                                <div class="sticker_container">
+                                    <p class="sticker_text para_text">GPT-4</p>
                                 </div>
                             </div>
                             <div class="tag">
-                                <div class="sticker_container sticker_color sticker_dark">
-                                    <p class="sticker_text para_text text_para_light">Redux Toolkit</p>
+                                <div class="sticker_container">
+                                    <p class="sticker_text para_text">Redux Toolkit</p>
                                 </div>
                             </div>
                             <div class="tag">
-                                <div class="sticker_container sticker_color sticker_dark">
-                                    <p class="sticker_text para_text text_para_light">Typescript</p>
+                                <div class="sticker_container">
+                                    <p class="sticker_text para_text">Typescript</p>
                                 </div>
                             </div>
                         </div>
-                        <a target="_blank" href="" class="work_external_link btn_bg-light_dark btn_ptr_container_bg-light_light">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                        <a target="_blank" href="" class="work_external_link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-external-link">
+                                <path d="M15 3h6v6" />
+                                <path d="M10 14 21 3" />
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -401,27 +411,27 @@
             <div id="footer_container" class="container">
                 <div id="footer_header_content" class="header_content">
                     <div class="tag">
-                        <div class="sticker_container sticker_color sticker_dark">
-                            <p class="sticker_text para_text text_para_light">Get in touch</p>
+                        <div class="sticker_container">
+                            <p class="sticker_text para_text">Get in touch</p>
                         </div>
                     </div>
-                    <p id="footer_header_text" class="section_header_text para_text text_para_light">
+                    <p id="footer_header_text" class="section_header_text para_text">
                         What's next? Feel free to reach out to me if you are looking for a developer, have a query, or
                         simply want to connect.
                     </p>
                 </div>
                 <div id="footer_content">
                     <div class="contacts">
-                        <div class="contact_text_container btn_ptr_container btn_ptr_container_light">
+                        <div class="contact_text_container btn_ptr_container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="lucide lucide-mail">
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
-                            <h2 id="email" class="contact_text header_text text_heading_light">rombis02@gmail.com</h2>
-                            <button class="copy_button btn_ptr glow_button_toggle" onclick="cpy_email()">
-                                <svg class="shrink_SVG btn_ptr_container btn_ptr_container_light"
+                            <h2 id="email" class="contact_text header_text">rombis02@gmail.com</h2>
+                            <button class="copy_button btn_ptr" onclick="cpy_email()">
+                                <svg class="shrink_SVG btn_ptr_container"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="lucide lucide-copy">
@@ -430,16 +440,16 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="contact_text_container btn_ptr_container btn_ptr_container_light">
+                        <div class="contact_text_container btn_ptr_container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="lucide lucide-phone">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                             </svg>
-                            <h2 id="number" class="contact_text header_text text_heading_light">+91 9830870603</h2>
-                            <button class="copy_button btn_ptr glow_button_toggle" onclick="cpy_num()">
-                                <svg class="shrink_SVG btn_ptr_container btn_ptr_container_light"
+                            <h2 id="number" class="contact_text header_text">+91 9830870603</h2>
+                            <button class="copy_button btn_ptr" onclick="cpy_num()">
+                                <svg class="shrink_SVG btn_ptr_container"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="lucide lucide-copy">
@@ -450,13 +460,13 @@
                         </div>
                     </div>
                     <div id="footer_reachout">
-                        <p class="paragraph para_text text_para_light">You may also find me on these platforms!</p>
+                        <p class="paragraph para_text">You may also find me on these platforms!</p>
                         <div>
                             <div id="socials">
                                 <button id="github_footer_button"
-                                    class="socials_container socials_hover btn_ptr glow_button_toggle"><span
+                                    class="btn_ptr"><span
                                         id="github_footer"
-                                        class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                                        class="btn_ptr_container">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
@@ -465,9 +475,9 @@
                                             <path d="M9 18c-4.51 2-5-2-7-2" />
                                         </svg></span></button>
                                 <button id="twitter_footer_button"
-                                    class="socials_container socials_hover btn_ptr glow_button_toggle"><span
+                                    class="btn_ptr"><span
                                         id="twitter_footer"
-                                        class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                                        class="btn_ptr_container">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -476,9 +486,9 @@
                                                 d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                                         </svg></span></button>
                                 <button id="linkedin_footer_button"
-                                    class="socials_container socials_hover btn_ptr glow_button_toggle"><span
+                                    class="btn_ptr"><span
                                         id="linkedin_footer"
-                                        class="btn_ptr_container btn_ptr_container_light glow_button_toggle_container">
+                                        class="btn_ptr_container">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -498,11 +508,16 @@
         </section>
         <section id="copyright" class="section_light_narrow">
             <div id="copyright_content">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copyright"><circle cx="12" cy="12" r="10"/><path d="M14.83 14.83a4 4 0 1 1 0-5.66"/></svg>
-                <p id="copyright_text" class="paragraph_small para_text text_para_light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-copyright">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M14.83 14.83a4 4 0 1 1 0-5.66" />
+                </svg>
+                <p id="copyright_text" class="paragraph_small para_text">
                     2023 | Designed and coded with ❤️️ by Romit Biswas
                 </p>
-        </div>
+            </div>
         </section>
     </div>
 </body>
