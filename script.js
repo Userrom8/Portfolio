@@ -63,8 +63,7 @@ function closeMenu() {
     if (window.outerWidth <= 320) menuWidth = remSize * 18;
     else menuWidth = remSize * 20;
     elem.style.width = menuWidth - scrollWidth + 'px';
-    elem.classList.add('defocus');
-    elem.classList.remove('focus');
+    elem.classList.replace('focus', 'defocus');
     document.getElementById('main').style.marginRight = '0';
     elem.id = 'menu_list';
     tLayer.classList.remove('show_layer');
@@ -131,11 +130,9 @@ function toggle() {
             nav.classList.replace('navbar_border_scroll', 'navbar_border');
         }
         let express = document.getElementById('express');
-        express.classList.add('express_dark');
-        express.classList.remove('express_light');
+        express.classList.replace('express_light', 'express_dark');
         let three = document.getElementById('three');
-        three.classList.add('three_dark');
-        three.classList.remove('three_light');
+        three.classList.replace('three_light', 'three_dark');
         for (i = 0; i < sun.length; i++) {
             sun[i].classList.add('hide');
         }
@@ -155,11 +152,9 @@ function toggle() {
             nav.classList.replace('navbar_border_scroll', 'navbar_border');
         }
         let express = document.getElementById('express');
-        express.classList.remove('express_dark');
-        express.classList.add('express_light');
+        express.classList.replace('express_dark', 'express_light');
         let three = document.getElementById('three');
-        three.classList.remove('three_dark');
-        three.classList.add('three_light');
+        three.classList.replace('three_dark', 'three_light');
         for (i = 0; i < sun.length; i++) {
             sun[i].classList.remove('hide');
         }
@@ -191,11 +186,9 @@ window.addEventListener('resize', () => {
     }
     let menu = document.getElementById('opened_menu');
     if (menu && window.outerHeight > 330) {
-        menu.classList.add('menu_noscroll');
-        menu.classList.remove('menu_scroll');
+        menu.classList.replace('menu_scroll', 'menu_noscroll');
     }
     else if (menu) {
-        menu.classList.remove('menu_noscroll');
-        menu.classList.add('menu_scroll');
+        menu.classList.replace('menu_noscroll', 'menu_scroll');
     }
 });
