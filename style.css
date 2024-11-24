@@ -21,7 +21,6 @@ html {
     --grey-100: #1f2937;
     --grey-70: #374151;
     --bg-download: #f0f0f0;
-    /* --grey-3: #121e36; */
     --grey-3: linear-gradient(129deg, rgba(0, 0, 0, 1) 43%, rgba(21, 66, 64, 1) 59%, rgba(17, 24, 39, 1) 82%);
     --grey-2: #010d24;
     --grey-1: #9da3ae;
@@ -63,7 +62,8 @@ html {
 }
 
 body {
-    background-color: var(--bg-body);
+    background: var(--bg-body);
+    transition: background 150ms ease-in-out, color 500ms ease-in-out;
 }
 
 .show_layer {
@@ -557,9 +557,9 @@ body {
     left: 0;
     height: 304px;
     width: 264px;
-    background-image: url("assets/hero.jpg");
-    background-size: cover;
-    background-position: 15%;
+    color: transparent;
+    object-fit: cover;
+    object-position: -8%;
     border: 8px solid var(--bg-body);
 }
 
@@ -663,9 +663,7 @@ body {
     right: 0;
     height: 404px;
     width: 324px;
-    background-image: url("assets/about.jpg");
-    background-size: cover;
-    background-position: 15%;
+    object-fit: cover;
     border: 8px solid var(--section-l);
 }
 
@@ -676,6 +674,18 @@ body {
     left: 0;
     height: 404px;
     width: 324px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #about_image_content {
+        height: 520px;
+        width: 440px;
+    }
+    
+    #about_image, #about_backdrop {
+        height: 464px;
+        width: 384px;
+    }
 }
 
 #about_text_container {
@@ -750,9 +760,7 @@ body {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: transparent;
 }
 
 .size-64 {
@@ -783,54 +791,6 @@ body {
     .skill_item_image:hover {
         transform: scale(1.1);
     }
-}
-
-#js {
-    background-image: url("assets/icon-javascript.svg");
-}
-
-#ts {
-    background-image: url("assets/icon-typescript.svg");
-}
-
-#react {
-    background-image: url("assets/icon-react.svg");
-}
-
-#next {
-    background-image: url("assets/icon-nextjs.svg");
-}
-
-#node {
-    background-image: url("assets/icon-nodejs.svg");
-}
-
-.express_light {
-    background-image: url("assets/icon-express-light.svg");
-}
-
-.express_dark {
-    background-image: url("assets/icon-express-dark.svg");
-}
-
-#tailwind {
-    background-image: url("assets/icon-tailwindcss.svg");
-}
-
-#figma {
-    background-image: url("assets/icon-figma.svg");
-}
-
-#git {
-    background-image: url("assets/icon-git.svg");
-}
-
-.three_light {
-    background-image: url("assets/icon-threejs-light.svg");
-}
-
-.three_dark {
-    background-image: url("assets/icon-threejs-dark.svg");
 }
 
 

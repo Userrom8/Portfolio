@@ -129,10 +129,10 @@ function toggle() {
         else {
             nav.classList.replace('navbar_border_scroll', 'navbar_border');
         }
-        let express = document.getElementById('express');
-        express.classList.replace('express_light', 'express_dark');
-        let three = document.getElementById('three');
-        three.classList.replace('three_light', 'three_dark');
+        let express = document.getElementById('express_img');
+        express.src = 'assets/icon-express-dark.svg';
+        let three = document.getElementById('three_img');
+        three.src = 'assets/icon-threejs-dark.svg';
         for (i = 0; i < sun.length; i++) {
             sun[i].classList.add('hide');
         }
@@ -151,10 +151,10 @@ function toggle() {
         else {
             nav.classList.replace('navbar_border_scroll', 'navbar_border');
         }
-        let express = document.getElementById('express');
-        express.classList.replace('express_dark', 'express_light');
-        let three = document.getElementById('three');
-        three.classList.replace('three_dark', 'three_light');
+        let express = document.getElementById('express_img');
+        express.src = 'assets/icon-express-light.svg';
+        let three = document.getElementById('three_img');
+        three.src = 'assets/icon-threejs-light.svg';
         for (i = 0; i < sun.length; i++) {
             sun[i].classList.remove('hide');
         }
