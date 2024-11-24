@@ -15,7 +15,7 @@
     <script src="script.js" async></script>
 </head>
 
-<body>
+<body class="no_transition">
     <div id="transparent_layer"></div>
     <div id="menu_list" class="hide">
         <!-- menu contents go here -->
@@ -60,7 +60,7 @@
                         </svg>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-moon-star">
+                            class="lucide lucide-moon-star hide">
                             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9" />
                             <path d="M20 3v4" />
                             <path d="M22 5h-4" />
@@ -100,7 +100,7 @@
                             </svg>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-moon-star">
+                                stroke-linejoin="round" class="lucide lucide-moon-star hide">
                                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9" />
                                 <path d="M20 3v4" />
                                 <path d="M22 5h-4" />
@@ -318,16 +318,16 @@
                         <p class="skill_item_text">Node.js</p>
                     </div>
                     <div class="skill_item">
-                        <a href="https://expressjs.com/" target="_blank" id="express"
-                            class="skill_item_image size-64">
-                            <img alt="Express.js" loading="lazy" decoding="async" src="assets/icon-express-light.svg" id="express_img">
+                        <a href="https://expressjs.com/" target="_blank" id="express" class="skill_item_image size-64">
+                            <img alt="Express.js" loading="lazy" decoding="async" src="assets/icon-express-light.svg"
+                                id="express_img">
                         </a>
                         <p class="skill_item_text">Express.js</p>
                     </div>
                     <div class="skill_item">
-                        <a href="https://threejs.org/" target="_blank" id="three"
-                            class="skill_item_image size-64">
-                            <img alt="Three.js" loading="lazy" decoding="async" src="assets/icon-threejs-light.svg" id="three_img">
+                        <a href="https://threejs.org/" target="_blank" id="three" class="skill_item_image size-64">
+                            <img alt="Three.js" loading="lazy" decoding="async" src="assets/icon-threejs-light.svg"
+                                id="three_img">
                         </a>
                         <p class="skill_item_text">Three.js</p>
                     </div>
@@ -368,8 +368,7 @@
                 <div id="work_content" class="work_tiles">
                     <div id="sumz_img_container" class="work_img_container">
                         <a target="_blank" href="">
-                            <img id="sumz_img" class="work_img" width="100%" height="100%" decoding="async"
-                                loading="lazy" src="assets/sumz.png">
+                            <img id="sumz_img" class="work_img" decoding="async" loading="lazy" src="assets/sumz.png">
                         </a>
                     </div>
                     <div id="sumz_txt_container" class="work_txt_container">

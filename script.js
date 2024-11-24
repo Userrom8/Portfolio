@@ -9,11 +9,27 @@ let nav = document.getElementById('navbar');
 let sun = document.getElementsByClassName('lucide-sun');
 let moon = document.getElementsByClassName('lucide-moon-star');
 let HTML = document.documentElement;
-let scrollWidth = 17;
 let menuWidth = remSize * 20;
 
-for (i = 0; i < moon.length; i++) {
-    moon[i].classList.add('hide');
+
+if (document.cookie === 'true') {
+    HTML.classList.replace('dark', 'light');
+    if (document.documentElement.scrollTop > 90) {
+        nav.classList.replace('navbar_border', 'navbar_border_scroll');
+    }
+    else {
+        nav.classList.replace('navbar_border_scroll', 'navbar_border');
+    }
+    let express = document.getElementById('express_img');
+    express.src = 'assets/icon-express-dark.svg';
+    let three = document.getElementById('three_img');
+    three.src = 'assets/icon-threejs-dark.svg';
+    for (i = 0; i < sun.length; i++) {
+        sun[i].classList.add('hide');
+    }
+    for (i = 0; i < moon.length; i++) {
+        moon[i].classList.remove('hide');
+    }
 }
 
 
@@ -27,7 +43,9 @@ function cpy_num() {
 
 
 function openMenu() {
+    let bodyWidth = document.body.offsetWidth;
     document.body.classList.add('noScroll');
+    document.body.style.width = bodyWidth + 'px';
     const elem = document.getElementById('menu_list');
     elem.classList.remove('defocus');
     elem.classList.add('focus');
@@ -38,8 +56,6 @@ function openMenu() {
         elem.classList.replace('menu_noscroll', 'menu_scroll');
     }
     elem.classList.add('menu_bg');
-    scrollWidth = window.outerWidth - document.body.offsetWidth + 1;
-    document.getElementById('main').style.marginRight = scrollWidth + 'px';    //scrollbar width
     elem.id = 'opened_menu';
     tLayer.classList.add('show_layer');
     document.body.addEventListener('click', function event(ev) {
@@ -58,10 +74,14 @@ function openMenu() {
     });
 }
 function closeMenu() {
-    document.body.classList.remove('noScroll');
+    let bodyWidth = HTML.offsetWidth;
     const elem = document.getElementById('opened_menu');
     if (window.outerWidth <= 320) menuWidth = remSize * 18;
     else menuWidth = remSize * 20;
+    document.body.classList.remove('noScroll');
+    document.body.style.width = '100%';
+    let scrollWidth = bodyWidth - document.body.offsetWidth;
+    console.log(bodyWidth + ' ' + document.body.offsetWidth + ' ' + scrollWidth);
     elem.style.width = menuWidth - scrollWidth + 'px';
     elem.classList.replace('focus', 'defocus');
     document.getElementById('main').style.marginRight = '0';
@@ -170,7 +190,6 @@ document.getElementById('mode_toggle').addEventListener('click', toggle);
 document.getElementById('menu_mode_toggle').addEventListener('click', toggle);
 
 
-if (document.cookie === 'true') toggle();
 
 window.addEventListener('resize', () => {
     if (window.outerWidth > 768) {
@@ -192,3 +211,6 @@ window.addEventListener('resize', () => {
         menu.classList.replace('menu_noscroll', 'menu_scroll');
     }
 });
+
+
+document.body.classList.replace('no_transition', 'transition');

@@ -63,6 +63,13 @@ html {
 
 body {
     background: var(--bg-body);
+}
+
+.no_transition {
+    transition: none;
+}
+
+.transition {
     transition: background 150ms ease-in-out, color 500ms ease-in-out;
 }
 
@@ -681,8 +688,9 @@ body {
         height: 520px;
         width: 440px;
     }
-    
-    #about_image, #about_backdrop {
+
+    #about_image,
+    #about_backdrop {
         height: 464px;
         width: 384px;
     }
@@ -1144,6 +1152,11 @@ body {
     }
 }
 
+#sumz_img {
+    height: 100%;
+    width: 100%;
+}
+
 .work_txt_container {
     display: flex;
     flex-direction: column;
@@ -1195,7 +1208,7 @@ body {
 }
 
 .glassmorphism {
-    background: rgba(255, 255, 255, 0.21);
+    background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(20px);
