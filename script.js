@@ -58,6 +58,12 @@ function openMenu() {
     elem.classList.add('menu_bg');
     elem.id = 'opened_menu';
     tLayer.classList.add('show_layer');
+    window.addEventListener('resize', function resizeEvent() {
+        if(window.outerWidth > 768){
+            closeMenu();
+            window.removeEventListener('resize', resizeEvent);
+        }
+    });
     document.body.addEventListener('click', function event(ev) {
         const ham_menu = document.getElementById('hamburger_menu');
         const close_button = document.getElementById('close_menu');
@@ -81,7 +87,6 @@ function closeMenu() {
     document.body.classList.remove('noScroll');
     document.body.style.width = '100%';
     let scrollWidth = bodyWidth - document.body.offsetWidth;
-    console.log(bodyWidth + ' ' + document.body.offsetWidth + ' ' + scrollWidth);
     elem.style.width = menuWidth - scrollWidth + 'px';
     elem.classList.replace('focus', 'defocus');
     document.getElementById('main').style.marginRight = '0';
