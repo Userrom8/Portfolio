@@ -133,13 +133,6 @@ body {
     overflow-x: hidden;
 }
 
-.menu_noscroll {
-    overflow-y: hidden;
-}
-
-.menu_scroll {
-    overflow-y: scroll;
-}
 
 @keyframes slidein {
     0% {
