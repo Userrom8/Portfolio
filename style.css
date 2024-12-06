@@ -1207,3 +1207,35 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.appear{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes extend{
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.extend{
+    animation: extend linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+}
