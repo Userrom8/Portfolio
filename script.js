@@ -41,7 +41,8 @@ function openMenu() {
   isOpenedMenu = true;
   let bodyWidth = document.body.offsetWidth;
   document.body.classList.add("noScroll");
-  document.body.style.marginRight = (document.body.offsetWidth - bodyWidth) + "px";
+  document.body.style.marginRight =
+    document.body.offsetWidth - bodyWidth + "px";
   const elem = document.getElementById("menu_list");
   elem.classList.remove("defocus");
   elem.classList.add("focus");
@@ -190,12 +191,9 @@ window.addEventListener("resize", () => {
   } else {
     nav.classList.replace("navbar_border", "navbar_border_scroll");
   }
-  if (isOpenedMenu){
+  if (isOpenedMenu) {
     if (HTML.offsetWidth > 768) {
-        closeMenu();
-    }
-    else{
-        // document.body.style.marginRight = 0;
+      closeMenu();
     }
   }
 });
