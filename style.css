@@ -1265,7 +1265,6 @@ body {
   position: absolute;
   left: 0;
   top: 0.28rem;
-  /* transform: translateY(0.1rem); */
 }
 
 #copyright_text {
@@ -1276,6 +1275,5 @@ body {
   .lucide-copyright {
     height: 1.02rem;
     width: 1.02rem;
-    /* transform: translateY(0.163rem); */
   }
 }
