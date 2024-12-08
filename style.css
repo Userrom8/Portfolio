@@ -126,6 +126,9 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--grey-50-inv);
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  background-size: cover;
 }
 
 .focus {
@@ -340,16 +343,14 @@ body {
   border: none;
 }
 
-.btn_ptr_container {
-  min-height: 1.5rem;
-  min-width: 1.5rem;
-  background-size: cover;
-}
-
 .btn_ptr:hover {
   cursor: pointer;
   background-color: var(--grey-100);
   transition: 0.3s ease;
+}
+
+.btn_ptr:active{
+  background-color: var(--grey-70);
 }
 
 .btn_ptr:hover .btn_ptr_container {
