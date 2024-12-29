@@ -349,7 +349,7 @@ body {
   transition: 0.3s ease;
 }
 
-.btn_ptr:active{
+.btn_ptr:active {
   background-color: var(--grey-70);
 }
 
@@ -680,7 +680,7 @@ body {
   width: 324px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   #about_image_content {
     height: 520px;
     width: 440px;
@@ -733,7 +733,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  overflow-x: clip;
 }
 
 .section_header_text {
@@ -747,6 +746,13 @@ body {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   row-gap: 3rem;
+  overflow-x: clip;
+}
+
+@media only screen and (min-width: 1700px) {
+  #skills_content {
+    overflow-x: visible;
+  }
 }
 
 .skill_item {
@@ -793,7 +799,7 @@ body {
   width: 71px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .skill_item_image:hover {
     transform: scale(1.1);
   }
@@ -906,7 +912,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
   #skills_content {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     row-gap: 2rem;
@@ -1125,7 +1131,7 @@ body {
   background-color: var(--grey-70);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .work_img_container {
     width: 50%;
     border-top-left-radius: 0.75rem;
@@ -1135,7 +1141,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .work_img_container {
     padding: 3rem;
   }
@@ -1152,7 +1158,7 @@ body {
   object-fit: cover;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .work_img:hover {
     transform: scale(1.05);
   }
@@ -1170,13 +1176,13 @@ body {
   padding: 2rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .work_txt_container {
     width: 50%;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .work_txt_container {
     padding: 3rem;
   }
@@ -1188,7 +1194,7 @@ body {
   font-weight: 600;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .work_tile_header {
     font-size: 1.25rem;
   }
@@ -1234,8 +1240,23 @@ body {
 
 .appear {
   animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 40%;
+  --staggered-entry-start: ;
+  animation-timeline: view(var(--staggered-entry-start) 0);
+  animation-range: entry 0 cover 50%;
+}
+
+@media only screen and (min-width: 769px) {
+  .appear {
+    --staggered-entry-start-md: ;
+    animation-timeline: view(var(--staggered-entry-start-md) 0);
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .appear {
+    --staggered-entry-start-lg: ;
+    animation-timeline: view(var(--staggered-entry-start-lg) 0);
+  }
 }
 
 @keyframes extend {

@@ -7,6 +7,7 @@ let tLayer = document.getElementById("transparent_layer");
 let nav = document.getElementById("navbar");
 let sun = document.getElementsByClassName("lucide-sun");
 let moon = document.getElementsByClassName("lucide-moon-star");
+let skills = document.getElementsByClassName("skill_item");
 let HTML = document.documentElement;
 let menuWidth = remSize * 20;
 let isOpenedMenu = false;
@@ -28,6 +29,11 @@ if (document.cookie === "true") {
   for (i = 0; i < moon.length; i++) {
     moon[i].classList.remove("hide");
   }
+}
+
+for (i = 0; i < skills.length; i++) {
+  skills[i].classList.add("appear");
+  skills[i].style.cssText = `--staggered-entry-start: ${(i % 3) * 10}%; --staggered-entry-start-md: ${(i % 6) * 10}%; --staggered-entry-start-lg: ${(i % 8) * 10}%;`;
 }
 
 function cpy_email() {
@@ -182,12 +188,8 @@ document.getElementById("mode_toggle").addEventListener("click", toggle);
 document.getElementById("menu_mode_toggle").addEventListener("click", toggle);
 
 window.addEventListener("resize", () => {
-  if (HTML.offsetWidth > 768) {
-    if (document.documentElement.scrollTop < 90) {
-      nav.classList.replace("navbar_border_scroll", "navbar_border");
-    } else {
-      nav.classList.replace("navbar_border", "navbar_border_scroll");
-    }
+  if (window.innerWidth > 768 && document.documentElement.scrollTop < 90) {
+    nav.classList.replace("navbar_border_scroll", "navbar_border");
   } else {
     nav.classList.replace("navbar_border", "navbar_border_scroll");
   }
