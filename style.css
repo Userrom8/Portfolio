@@ -562,7 +562,6 @@ body {
   left: 0;
   height: 304px;
   width: 264px;
-  color: transparent;
   object-fit: cover;
   object-position: -8%;
   border: 8px solid var(--bg-body);
