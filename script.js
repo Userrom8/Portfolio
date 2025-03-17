@@ -33,7 +33,11 @@ if (document.cookie === "true") {
 
 for (i = 0; i < skills.length; i++) {
   skills[i].classList.add("appear");
-  skills[i].style.cssText = `--staggered-entry-start: ${(i % 3) * 10}%; --staggered-entry-start-md: ${(i % 6) * 10}%; --staggered-entry-start-lg: ${(i % 8) * 10}%;`;
+  skills[i].style.cssText = `--staggered-entry-start: ${
+    (i % 3) * 10
+  }%; --staggered-entry-start-md: ${
+    (i % 6) * 10
+  }%; --staggered-entry-start-lg: ${(i % 8) * 10}%;`;
 }
 
 function cpy_email() {
@@ -199,5 +203,32 @@ window.addEventListener("resize", () => {
     }
   }
 });
+
+function stateRetain(link_id, section_id) {
+  document.getElementById(link_id).addEventListener("click", (ev) => {
+    ev.preventDefault();
+    document.getElementById(section_id).scrollIntoView({
+      behavior: "smooth",
+    });
+
+    history.pushState(null, "", "/" + section_id);
+    setTimeout(() => {
+      history.replaceState(null, "", "/");
+    }, 500);
+  });
+
+  window.addEventListener("load", function () {
+    if (window.location.pathname === "/" + section_id) {
+      history.replaceState(null, "", "/");
+    }
+  });
+}
+
+stateRetain("about-link", "about");
+stateRetain("work-link", "work");
+stateRetain("footer-link", "footer");
+stateRetain("about-link-sidepanel", "about");
+stateRetain("work-link-sidepanel", "work");
+stateRetain("footer-link-sidepanel", "footer");
 
 document.body.classList.replace("no_transition", "transition");
